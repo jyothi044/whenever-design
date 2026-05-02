@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  /* Matched from Framer export fallbacks — see whenevr.framer.website */
+  --canvas: #f0f0f0;
+  --foreground: rgb(26, 26, 26);
+  --muted: rgb(124, 124, 124);
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-ink: rgb(26, 26, 26);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), ui-serif, Georgia, "Times New Roman",
+    serif;
+  --font-display-mono: var(--font-fragment), ui-monospace, monospace;
+
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px rgb(0 0 0 / 0.04);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: rgb(0 0 0 / 0.12);
+    color: var(--foreground);
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--foreground);
+    letter-spacing: -0.02em;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 52s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-rise {
+  animation: fade-rise 0.98s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-rise {
+    animation: none !important;
+  }
+}
+
+.hero-title-text {
+  font-family: var(--font-source-serif), ui-serif, Georgia, serif;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: -0.038em;
+  line-height: 0.93;
+  color: rgb(26, 26, 26);
+  font-size: clamp(3rem, 9.25vw + 0.05rem, 5.625rem);
+}
