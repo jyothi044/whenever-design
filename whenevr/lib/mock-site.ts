@@ -36,6 +36,7 @@ export const trusted = {
 export const howItWorks = {
   label: "How it works",
   title: "Welcome to the better way of getting design done.",
+  titleEmphasis: "better",
   planName: "whenevr",
   priceUsd: "$2,995",
   cadence: "/month",
@@ -71,11 +72,22 @@ export const howItWorks = {
       body: "Your design is delivered in a few business days. Simple, fast, and ready to use.",
     },
   ],
-  demoCaption: "Example content for demo purposes only.",
+  /** Floating pill labels on the Request card (template layout). */
+  requestPills: [
+    { label: "Pitch Decks", top: "8%", left: "4%", rotate: "-6deg" },
+    { label: "Branding", top: "4%", right: "8%", rotate: "4deg" },
+    { label: "Social Graphics", top: "38%", left: "0%", rotate: "-3deg" },
+    { label: "Email Design", top: "22%", right: "4%", rotate: "5deg" },
+    { label: "Landing Pages", bottom: "28%", left: "6%", rotate: "2deg" },
+    { label: "Icon Design", top: "48%", right: "12%", rotate: "-4deg" },
+    { label: "Ad Creatives", bottom: "12%", right: "6%", rotate: "3deg" },
+    { label: "UI Design", bottom: "8%", left: "22%", rotate: "-2deg" },
+  ],
 };
 
 export const clients = {
   title: "100+ clients getting better design, faster.",
+  titleEmphasis: "better",
   callCta: "Book a 15-min intro call",
   callMeta: "Available now",
   calendarLabel: "Open calendar",

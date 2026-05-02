@@ -13,8 +13,8 @@ export function FeaturesSection() {
         <div className="grid gap-[clamp(1.85rem,3vw,2.25rem)] min-[760px]:grid-cols-2">
           {features.items.map((f) => (
             <div key={f.title} className="group rounded-[20px] p-[2px]">
-              <div className="group/feature h-full rounded-[18px] border border-transparent bg-white/[0.35] p-[clamp(1.15rem,2.2vw,1.65rem)] transition-[border-color,background-color,transform] duration-300 motion-safe:group-hover:-translate-y-0.5 motion-safe:group-hover/feature:border-black/[0.08] motion-safe:group-hover/feature:bg-white motion-reduce:group-hover:translate-y-0">
-                <p className="text-[clamp(17px,1.9vw,19px)] font-semibold tracking-[-0.032em] text-ink transition-colors duration-250 group-hover:text-ink">
+              <div className="h-full rounded-[18px] border border-transparent bg-white/[0.35] p-[clamp(1.15rem,2.2vw,1.65rem)] transition-[border-color,background-color,transform] duration-300 motion-safe:group-hover:-translate-y-0.5 motion-safe:group-hover:border-black/[0.08] motion-safe:group-hover:bg-white motion-reduce:group-hover:translate-y-0">
+                <p className="text-[clamp(17px,1.9vw,19px)] font-semibold tracking-[-0.032em] text-ink transition-colors duration-200">
                   {f.title}
                 </p>
                 <p className="mt-3 max-w-[16rem] text-[14px] font-normal leading-relaxed tracking-[-0.02em] text-muted">

@@ -2,7 +2,7 @@
 
 :root {
   /* Matched from Framer export fallbacks — see whenevr.framer.website */
-  --canvas: #f0f0f0;
+  --canvas: #f3f3f3;
   --foreground: rgb(26, 26, 26);
   --muted: rgb(124, 124, 124);
 }

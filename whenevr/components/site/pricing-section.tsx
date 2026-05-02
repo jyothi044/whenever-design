@@ -1,11 +1,10 @@
-import Link from "next/link";
 import { pricing } from "@/lib/mock-site";
 import { PillButton } from "@/components/ui/pill-button";
 
 export function PricingSection({ id }: { id: string }) {
   return (
     <section id={id} className="border-y border-black/[0.045] bg-canvas py-[clamp(4.85rem,10vw,6.85rem)]">
-      <div className="mx-auto grid max-w-[1200px] gap-[clamp(2.85rem,5vw,4rem)] px-6 min-[810px]:grid-cols-2 min-[810px]:items-stretch min-[810px]:px-8 min-[1200px]:grid-cols-[1fr_1fr_1fr] min-[1200px]:gap-8 min-[1200px]:px-0">
+      <div className="mx-auto grid max-w-[1200px] gap-[clamp(2.85rem,5vw,4rem)] px-6 min-[810px]:grid-cols-2 min-[810px]:items-stretch min-[810px]:px-8 min-[1200px]:grid-cols-4 min-[1200px]:gap-8 min-[1200px]:px-0">
         <PricingIntroCard />
 
         {[0, 1, 2].map((slice) => (

@@ -22,7 +22,7 @@ export function PillButton(props: ButtonProps) {
   } = props;
 
   const rounded =
-    "inline-flex shrink-0 items-center justify-center gap-2 rounded-full font-medium outline-none ring-offset-[#f0f0f0] transition-[transform,color,background-color,border-color,opacity,box-shadow] duration-300 [--ease:var(--ease-out-expo)]";
+    "inline-flex shrink-0 items-center justify-center gap-2 rounded-full font-medium outline-none ring-offset-[#f3f3f3] transition-[transform,color,background-color,border-color,opacity,box-shadow] duration-300 [--ease:var(--ease-out-expo)]";
 
   const primary =
     "bg-ink text-white hover:-translate-y-px hover:shadow-[0_12px_32px_-8px_rgb(0_0_0/0.28)] hover:bg-[rgb(34,34,34)] active:translate-y-0";

@@ -43,10 +43,16 @@ export function SiteHeader() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="relative z-50 flex size-11 items-center justify-center rounded-full bg-white shadow-[var(--shadow-card)] ring-1 ring-black/[0.04] transition-transform duration-300 hover:-translate-y-px min-[810px]:hidden active:translate-y-0"
+          className="relative z-50 inline-flex items-center gap-1.5 rounded-full border border-black/[0.08] bg-white px-5 py-2.5 text-[13px] font-semibold tracking-[-0.04em] text-ink shadow-[var(--shadow-card)] ring-1 ring-black/[0.03] transition-[transform] duration-300 hover:-translate-y-px active:translate-y-0 min-[810px]:hidden"
           onClick={() => setOpen((v) => !v)}
         >
-          <MenuIcon open={open} />
+          Menu
+          <span
+            aria-hidden
+            className={`mt-px inline-flex transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          >
+            <ChevronDown />
+          </span>
         </button>
       </div>
 
@@ -96,32 +102,16 @@ export function SiteHeader() {
   );
 }
 
-function MenuIcon({ open }: { open: boolean }) {
+function ChevronDown() {
   return (
-    <span className="relative block size-[18px]">
-      <span
-        aria-hidden
-        className="absolute inset-x-[1px] top-[7px] h-[2px] rounded-full bg-ink transition-[transform,border-radius,top] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
-        style={{
-          transform: open ? "translateY(0) rotate(45deg)" : "rotate(0deg)",
-          top: open ? 8 : 4,
-          borderRadius: open ? "1px" : "99px",
-        }}
+    <svg width={14} height={14} viewBox="0 0 24 24" fill="none" className="text-ink">
+      <path
+        d="M6 9l6 6 6-6"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
-      <span
-        aria-hidden
-        className={`absolute inset-x-[1px] top-[calc(50%-1px)] h-[2px] rounded-full bg-ink transition-all duration-200 ${
-          open ? "opacity-0 scale-[0.2]" : "opacity-100"
-        }`}
-      />
-      <span
-        aria-hidden
-        className="absolute inset-x-[1px] bottom-[7px] h-[2px] rounded-full bg-ink transition-[transform,bottom] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
-        style={{
-          transform: open ? "translateY(0) rotate(-45deg)" : "rotate(0deg)",
-          bottom: open ? "7px" : "4px",
-        }}
-      />
-    </span>
+    </svg>
   );
 }
