@@ -1,0 +1,10 @@
+node_modules/
+whenevr/node_modules/
+whenevr/.next/
+whenevr/out/
+.DS_Store
+*.log
+whenevr/whenevr-source.html
+whenevr/.env*
+whenevr/scripts/framer-images.json
+whenevr/scripts/image-map-report.json

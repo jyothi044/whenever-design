@@ -1,0 +1,17 @@
+{
+  "name": "whenever-design",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "whenevr"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w whenevr",
+    "build": "npm run build -w whenevr",
+    "start": "npm run start -w whenevr",
+    "lint": "npm run lint -w whenevr"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
